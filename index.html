@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#466a75" />
+  <title>Compass v6</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Compass</p>
+        <h1>Household Finance Planning</h1>
+      </div>
+      <button id="menuBtn" class="icon-btn" aria-label="Open menu">☰ More</button>
+    </header>
+
+    <nav class="primary-tabs">
+      <button class="nav active" data-screen="dashboard">Dashboard</button>
+      <button class="nav" data-screen="accounts">Accounts</button>
+      <button class="nav menu-open" data-screen="menu">☰ More</button>
+    </nav>
+
+    <aside id="sideMenu" class="side-menu" aria-hidden="true">
+      <div class="side-card">
+        <div class="side-head"><strong>Compass Menu</strong><button id="closeMenu" class="plain">×</button></div>
+        <button data-screen="household">Household</button>
+        <button data-screen="calendar">Calendar</button>
+        <button data-screen="bills">Bills</button>
+        <button data-screen="buckets">Buckets</button>
+        <button data-screen="goals">Savings Goals</button>
+        <button data-screen="events">Events</button>
+        <button data-screen="paychecks">Paychecks</button>
+        <button data-screen="assign">Assign Money</button>
+        <button data-screen="fundingHistory">Funding History</button>
+        <button data-screen="simulator">Decision Simulator</button>
+        <button data-screen="ai">Compass Insights</button>
+        <button data-screen="settings">Settings</button>
+      </div>
+    </aside>
+
+    <main>
+      <section id="dashboard" class="screen active"></section>
+      <section id="accounts" class="screen"></section>
+      <section id="household" class="screen"></section>
+      <section id="calendar" class="screen"></section>
+      <section id="bills" class="screen"></section>
+      <section id="buckets" class="screen"></section>
+      <section id="goals" class="screen"></section>
+      <section id="events" class="screen"></section>
+      <section id="paychecks" class="screen"></section>
+      <section id="assign" class="screen"></section>
+      <section id="fundingHistory" class="screen"></section>
+      <section id="simulator" class="screen"></section>
+      <section id="ai" class="screen"></section>
+      <section id="settings" class="screen"></section>
+    </main>
+  </div>
+
+  <dialog id="modal" class="modal"><form id="modalForm" method="dialog" class="modal-card"></form></dialog>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
