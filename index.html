@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#253f55" />
+  <title>Compass Test Cottagecore Asset Build</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar compact-topbar">
+      <div class="topbar-left">
+        <button class="nav-btn menu-trigger" id="moreBtn" aria-label="Open Compass menu">☰ Menu</button>
+        <button class="brand" data-nav="dashboard" aria-label="Go to Dashboard">
+          <span class="brand-mark">⌖</span>
+          <span>
+            <strong>Compass</strong>
+            <small>Household planning</small>
+          </span>
+        </button>
+      </div>
+      <button id="availablePill" class="available-pill" type="button" onclick="explainAvailableToPlan()" aria-label="Explain Available to Plan"><span>Available to Plan</span><strong>$0.00</strong></button>
+    </header>
+
+    <aside id="sideDrawer" class="side-drawer" aria-label="Compass menu">
+      <div class="drawer-head">
+        <div>
+          <strong>Compass Menu</strong>
+          <small>Everything beyond the dashboard</small>
+        </div>
+        <button id="closeDrawer" class="icon-btn" aria-label="Close menu">×</button>
+      </div>
+      <button data-nav="accounts">Accounts</button>
+      <button data-nav="calendar">Calendar</button>
+      <button data-nav="bills">Bills</button>
+      <button data-nav="buckets">Buckets</button>
+      <button data-nav="goals">Savings Goals</button>
+      <button data-nav="events">Events</button>
+      <button data-nav="paychecks">Paychecks</button>
+      <button data-nav="assign">Assign Money</button>
+      <button data-nav="fundingHistory">Funding History</button>
+      <button data-nav="simulator">Decision Simulator</button>
+      <button data-nav="insights">Compass Insights</button>
+      <button data-nav="settings">Settings</button>
+    </aside>
+    <div id="drawerBackdrop" class="drawer-backdrop"></div>
+
+    <main>
+      <section id="dashboard" class="screen active"></section>
+      <section id="accounts" class="screen"></section>
+      <section id="calendar" class="screen"></section>
+      <section id="bills" class="screen"></section>
+      <section id="buckets" class="screen"></section>
+      <section id="goals" class="screen"></section>
+      <section id="events" class="screen"></section>
+      <section id="paychecks" class="screen"></section>
+      <section id="assign" class="screen"></section>
+      <section id="fundingHistory" class="screen"></section>
+      <section id="simulator" class="screen"></section>
+      <section id="insights" class="screen"></section>
+      <section id="settings" class="screen"></section>
+    </main>
+  </div>
+
+  <dialog id="recordDialog" class="modal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2 id="dialogTitle">Add record</h2>
+        <button id="dialogClose" class="icon-btn" type="button" aria-label="Close">×</button>
+      </div>
+      <form id="recordForm" novalidate></form>
+    </div>
+  </dialog>
+
+  <dialog id="confirmDialog" class="modal small-modal">
+    <div class="modal-card">
+      <h2 id="confirmTitle">Confirm</h2>
+      <div id="confirmBody" class="muted"></div>
+      <div class="button-row right">
+        <button id="confirmCancel" class="btn ghost" type="button">Cancel</button>
+        <button id="confirmOk" class="btn danger" type="button">Continue</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
